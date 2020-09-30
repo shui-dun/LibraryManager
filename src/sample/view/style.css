@@ -1,0 +1,161 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.label {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 30pt;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
+}
+
+.label-alarm {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #d93a49;
+    -fx-opacity: 1;
+}
+
+.label-english {
+    -fx-font-size: 25pt;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
+}
+
+.text-field {
+    -fx-background-radius: 30;
+    -fx-font-size: 12pt;
+    -fx-alignment: center;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+.text-field-header {
+    -fx-background-radius: 30;
+    -fx-font-size: 17pt;
+    -fx-alignment: center;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+.text-area {
+    -fx-font-size: 15pt;
+    -fx-wrap-text: true;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+.button {
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-background-color: #d3d7d4;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #ffffff;
+}
+
+.button:pressed {
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #000000;
+}
+
+.button-square {
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #000000;
+}
+
+.button-square:hover {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: #d3d7d4;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #ffffff;
+}
+
+.button-square:pressed {
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 20pt;
+    -fx-text-fill: #000000;
+}
+
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 15;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #000000;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #ffffff00;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: #f6f5ec;
+    -fx-font-size: 16;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-color: #78cdd1;
+    -fx-font-size: 16;
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font: 24px "Microsoft YaHei";
+}
+
+.combo-box:hover {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: #d3d7d4;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font: 24px "Microsoft YaHei";
+    -fx-text-fill: #ffffff;
+}

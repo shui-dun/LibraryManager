@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0"
+            prefWidth="477.0" style="-fx-background-color: #ffffff;"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.LoginController">
+    <children>
+        <TextField fx:id="accountText" layoutX="143.0" layoutY="82.0"
+                   prefHeight="42.0" prefWidth="276.0" promptText="输入职工号或学号"
+                   styleClass="text-field-header">
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </TextField>
+        <PasswordField fx:id="passwordText" layoutX="146.0" layoutY="154.0"
+                       prefHeight="30.0" prefWidth="276.0"
+                       styleClass="text-field-header">
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </PasswordField>
+        <Button fx:id="buttonLogin" layoutX="45.0" layoutY="223.0"
+                mnemonicParsing="false" prefHeight="11.0" prefWidth="161.0"
+                styleClass="button-square" text=" 登录">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../icon/login.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </Button>
+        <ComboBox fx:id="signUpBox" layoutX="261.0" layoutY="223.0"
+                  prefHeight="59.0" prefWidth="161.0"/>
+        <ImageView fitHeight="38.0" fitWidth="36.0" layoutX="67.0"
+                   layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../icon/book.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="149.0" layoutY="18.0" text="图   书   馆   管   理   系   统">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Label>
+        <Line endX="230.0" layoutX="190.0" layoutY="60.0" startX="-135.0"
+              strokeWidth="4.0"/>
+        <Label fx:id="promptLabel" layoutX="152.0" layoutY="127.0"
+               styleClass="label-alarm" text="账号或密码只能包含数字" textFill="#d71345"
+               visible="false">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="52.0" layoutY="88.0" text="账号"/>
+        <Label layoutX="52.0" layoutY="160.0" text="密码"/>
+        <Label fx:id="labelWrongPassword" layoutX="56.0" layoutY="281.0"
+               styleClass="label-alarm" text="账号或密码错误" visible="false"/>
+    </children>
+</AnchorPane>

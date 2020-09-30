@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="917.0" prefWidth="1308.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ManagerHomePageController">
+   <children>
+      <TabPane prefHeight="917.0" prefWidth="1308.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="  学    生    资    料  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonSearchStudent" layoutX="855.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="搜索">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonModifyStudent" layoutX="1040.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="保存">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/modify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="textSearchStudent" alignment="CENTER" layoutX="112.0" layoutY="44.0" prefHeight="59.0" prefWidth="663.0" promptText="请键入搜索内容 " style="-fx-background-radius: 30;" styleClass="text-field-header">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="1080.0" layoutX="159.0" layoutY="142.0" startX="-100.0" strokeWidth="3.0" />
+                        <TableView fx:id="tableStudent" editable="true" layoutX="43.0" layoutY="171.0" prefHeight="689.0" prefWidth="1221.0" style="-fx-opacity: 0.8;" />
+                        <Label fx:id="labelModifyStudentSuccess" layoutX="981.0" layoutY="112.0" styleClass="label-alarm" text="成功将更改保存至数据库" visible="false" />
+                        <Label fx:id="labelModifyStudentLose" layoutX="1054.0" layoutY="112.0" styleClass="label-alarm" text="保存失败！" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/student.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="  职    工    资    料  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Line endX="1080.0" layoutX="159.0" layoutY="142.0" startX="-100.0" strokeWidth="3.0" />
+                        <TextField fx:id="textSearchManager" alignment="CENTER" layoutX="112.0" layoutY="44.0" prefHeight="59.0" prefWidth="663.0" promptText="请键入搜索内容" style="-fx-background-radius: 30;" styleClass="text-field-header">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="buttonSearchManager" layoutX="796.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="搜索">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonModifyManager" layoutX="950.0" layoutY="41.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="保存">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/modify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonLogout" layoutX="1107.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="登出">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="tableManager" editable="true" layoutX="43.0" layoutY="171.0" prefHeight="689.0" prefWidth="1221.0" />
+                        <Label fx:id="labelModifyManagerSuccess" layoutX="1040.0" layoutY="112.0" styleClass="label-alarm" text="成功将更改保存至数据库" visible="false" />
+                        <Label fx:id="labelModifyManagerLose" layoutX="1128.0" layoutY="112.0" styleClass="label-alarm" text="保存失败！" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/manager.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="  书    籍    资    料  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Line endX="1080.0" layoutX="159.0" layoutY="142.0" startX="-100.0" strokeWidth="3.0" />
+                        <TextField fx:id="textSearchBook" alignment="CENTER" layoutX="112.0" layoutY="44.0" prefHeight="59.0" prefWidth="663.0" promptText="请键入搜索内容" style="-fx-background-radius: 30;" styleClass="text-field-header">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="buttonSearchBook" layoutX="855.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="搜索">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buttonModifyBook" layoutX="1040.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="保存">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/modify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="tableBook" editable="true" layoutX="43.0" layoutY="171.0" prefHeight="689.0" prefWidth="1221.0" />
+                        <Label fx:id="labelModifyBookSuccess" layoutX="1006.0" layoutY="112.0" styleClass="label-alarm" text="成功将更改保存至数据库" visible="false" />
+                        <Label fx:id="labelModifyBookLose" layoutX="1087.0" layoutY="112.0" styleClass="label-alarm" text="保存失败！" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/book2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1308.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.StudentHomePageController">
+   <children>
+      <TabPane prefHeight="917.0" prefWidth="1308.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="  借    阅    书    籍  ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="961.0" prefWidth="1308.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Button fx:id="buttonSearchBook" layoutX="827.0" layoutY="40.0" mnemonicParsing="false" text="搜索/刷新">
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonBorrow" layoutX="1075.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="借阅">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/book2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="textSearchBook" alignment="CENTER" layoutX="112.0" layoutY="44.0" prefHeight="59.0" prefWidth="663.0" promptText="请键入搜索内容" style="-fx-background-radius: 30;" styleClass="text-field-header">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="1080.0" layoutX="159.0" layoutY="142.0" startX="-100.0" strokeWidth="3.0" />
+                        <TableView fx:id="tableBorrow" editable="true" layoutX="40.0" layoutY="174.0" prefHeight="676.0" prefWidth="1228.0" />
+                        <Label fx:id="labelBorrowSuccess" layoutX="963.0" layoutY="112.0" styleClass="label-alarm" text="借书成功，您有30天的阅读期限" visible="false" />
+                        <Label fx:id="labelBorrowLose" layoutX="904.0" layoutY="112.0" styleClass="label-alarm" text="借书失败！请检查是否已经借阅此书" visible="false" />
+                        <Label fx:id="labelBorrowBookNotSelected" layoutX="996.0" layoutY="111.0" styleClass="label-alarm" text="请选择要借阅的书籍" visible="false" />
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab text="  归    还    书    籍  ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Button fx:id="buttonReturn" layoutX="1024.0" layoutY="38.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="157.0" style="-fx-background-radius: 30;" text="归还">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/book2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Line endX="1080.0" layoutX="159.0" layoutY="142.0" startX="-100.0" strokeWidth="3.0" />
+                        <TableView fx:id="tableReturn" editable="true" layoutX="40.0" layoutY="174.0" prefHeight="676.0" prefWidth="1228.0" />
+                        <Label fx:id="labelReturnSuccess" layoutX="995.0" layoutY="110.0" styleClass="label-alarm" text="还书成功" visible="false" />
+                        <Label fx:id="labelReturnLose" layoutX="995.0" layoutY="110.0" styleClass="label-alarm" text="还书失败！" visible="false" />
+                        <Label fx:id="labelReturnBookNotSelected" layoutX="995.0" layoutY="110.0" styleClass="label-alarm" text="请选择要归还的书籍" visible="false" />
+                        <Button fx:id="buttonRefresh" layoutX="838.0" layoutY="38.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="157.0" style="-fx-background-radius: 30;" text="刷新">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/book2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="  个    人    信    息  ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="276.0" layoutY="136.0" prefHeight="572.0" prefWidth="756.0">
+                           <children>
+                              <VBox layoutX="215.0" layoutY="180.0" prefHeight="289.0" prefWidth="467.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="textID" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="textClass" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="textFaculty" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="textPassword" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="buttonModifyOK" layoutX="70.0" layoutY="482.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="273.0" text="确认修改">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icon/ok.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="buttonLogout" layoutX="409.0" layoutY="482.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="273.0" text="退出登录">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icon/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <ComboBox fx:id="genderBox" layoutX="526.0" layoutY="110.0" prefHeight="54.0" prefWidth="156.0" />
+                              <TextField fx:id="textLastName" layoutX="215.0" layoutY="110.0" prefHeight="50.0" prefWidth="125.0" styleClass="text-field-header">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFirstName" layoutX="358.0" layoutY="110.0" prefHeight="50.0" prefWidth="156.0" styleClass="text-field-header">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="304.0" layoutY="31.0" prefHeight="34.0" prefWidth="349.0" text="个    人    信    息    查    询">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="400.0" layoutX="221.0" layoutY="78.0" startX="-100.0" strokeWidth="3.0" />
+                              <VBox layoutX="120.0" layoutY="107.0" prefHeight="359.0" prefWidth="100.0" spacing="23.0">
+                                 <children>
+                                    <Label prefHeight="50.0" prefWidth="102.0" text="资料" />
+                                    <Label prefHeight="50.0" prefWidth="102.0" text="学号" />
+                                    <Label prefHeight="50.0" prefWidth="102.0" text="班级" />
+                                    <Label prefHeight="50.0" prefWidth="102.0" text="院系" />
+                                    <Label prefHeight="50.0" prefWidth="102.0" text="密码" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelModifyOK" layoutX="350.0" layoutY="700.0" styleClass="label-alarm" text="修改成功！" textFill="#d64f44" visible="false">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelModifyLose" layoutX="350.0" layoutY="700.0" styleClass="label-alarm" text="修改失败！" textFill="#d64f44" visible="false">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/manager.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

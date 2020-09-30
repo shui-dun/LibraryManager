@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="572.0" prefWidth="756.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.StudentSignUpPageController">
+   <children>
+      <TextField fx:id="textLastName" layoutX="215.0" layoutY="110.0" prefHeight="50.0" prefWidth="125.0" promptText="姓" styleClass="text-field-header">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textFirstName" layoutX="373.0" layoutY="110.0" prefHeight="50.0" prefWidth="156.0" promptText="名" styleClass="text-field-header">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="genderBox" layoutX="546.0" layoutY="110.0" prefHeight="54.0" prefWidth="136.0" />
+      <VBox layoutX="215.0" layoutY="180.0" prefHeight="289.0" prefWidth="467.0" spacing="20.0">
+         <children>
+            <TextField fx:id="textID" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textClass" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFaculty" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textPassword" prefHeight="50.0" prefWidth="467.0" styleClass="text-field-header">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="107.0" layoutY="107.0" prefHeight="359.0" prefWidth="100.0" spacing="21.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="102.0" text="资料" />
+            <Label prefHeight="50.0" prefWidth="102.0" text="学号" />
+            <Label prefHeight="50.0" prefWidth="102.0" text="班级" />
+            <Label prefHeight="50.0" prefWidth="102.0" text="院系" />
+            <Label prefHeight="50.0" prefWidth="102.0" text="密码" />
+         </children>
+      </VBox>
+      <Button fx:id="buttonOK" layoutX="70.0" layoutY="482.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="273.0" text="    注 册">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/signUp.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="buttonBack" layoutX="409.0" layoutY="482.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="273.0" text="    返 回">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="304.0" layoutY="31.0" prefHeight="34.0" prefWidth="349.0" text="学    生    注    册    系    统">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Line endX="400.0" layoutX="221.0" layoutY="78.0" startX="-100.0" strokeWidth="3.0" />
+      <Label fx:id="labelOK" layoutX="100.0" layoutY="440.0" styleClass="label-alarm" text="注册成功！" textFill="#d64f44" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLose" layoutX="100.0" layoutY="440.0" styleClass="label-alarm" text="注册失败！该用户名已被注册或资料填充不全" textFill="#d64f44" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
